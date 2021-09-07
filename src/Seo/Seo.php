@@ -81,6 +81,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if(!$this->record) {
                     $this->record = isset($this->twig->getGlobals()['record'])
@@ -109,6 +110,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['title']) && $this->seoData['title'] !== '') {
                     return $this->cleanUp($this->seoData['title'].$this->postfixTitle());
@@ -154,6 +156,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['description']) && $this->seoData['description'] !== '') {
                     $description = $this->cleanUp($this->seoData['description']);
@@ -190,6 +193,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['keywords']) && $this->seoData['keywords'] !== '') {
                     $keywords = $this->cleanUp($this->seoData['keywords']);
@@ -216,6 +220,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['og']) && $this->seoData['og'] !== '') {
                     return $this->cleanUp($this->seoData['og']);
@@ -239,6 +244,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['robots']) && $this->seoData['robots'] !== '') {
                     return $this->cleanUp($this->seoData['robots']);
@@ -262,6 +268,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
             if ($this->record) {
                 $field = $this->getField($this->record, 'image');
@@ -288,6 +295,7 @@ class Seo
 
         switch ($this->routeType) {
             case 'record':
+            case 'pagebinding':
             case 'homepage':
                 if($this->seoData && isset($this->seoData['canonical']) && $this->seoData['canonical'] !== '') {
                     return $this->cleanUp($this->seoData['canonical']);
